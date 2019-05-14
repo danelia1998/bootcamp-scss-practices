@@ -29,6 +29,8 @@ $ff:'fontawesome';
     padding-top: 50px;
     width: 1171px;
     margin: auto;
+    display: grid;
+    grid-template-columns: 570px 570px;
 }
 
 
@@ -41,6 +43,15 @@ $ff:'fontawesome';
     padding: 34px 92px 34px 48px;
     margin-left: 26px;
     margin-bottom: 31px;
+
+    &:nth-child(odd){
+        margin-left: 0;
+    }
+
+    &:nth-child(even){
+        margin-right: -30px;
+    }
+
     a::after{
         content: "\f00d";
         font-family: $ff;
@@ -72,6 +83,7 @@ $ff:'fontawesome';
         font-family: $ff;
         background-color: $color-2;
         border: 8px solid $bc-2;
+        flex-shrink: 0;
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -177,6 +189,9 @@ $ff:'fontawesome';
 
     } 
     &.information{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-right: -30px;
         &:before{
             content: '\f129';
             color: $color-8-2;
